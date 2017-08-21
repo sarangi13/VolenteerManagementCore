@@ -1,13 +1,18 @@
-﻿@model IEnumerable<Volenteer>
-<h1>Volenteers</h1>
-<hr />
-<br />
-@foreach (var v in Model)
+@model VolenteerListViewModel
+<h1>
+    Volenteers
+    <div page-model="@Model.Paginginfo" page-action="List" page-classes-enabled="true"
+         page-class="btn" page-class-nromal="btn-default"
+         page-class-selected="btn-primary" class="btn-group pull-right">
+    </div>
+</h1>
+@foreach (var v in Model.Volenteers)
 {
-    <h4>First Name: @v.FirstName</h4>
-    <h4>Last Name: @v.LastName</h4>
-    <h5>Status: @v.ApprovalStatus</h5>
-    <hr />
-    <br />
-    
+    @Html.Partial("VolenteerSummary", v)
 }
+
+<div page-model="@Model.Paginginfo" page-action="List" page-classes-enabled="true"
+     page-class="btn" page-class-nromal="btn-default"
+     page-class-selected="btn-primary" page-url-status="@Model.CurrentStatus"
+     class="btn-group pull-right">
+</div>
