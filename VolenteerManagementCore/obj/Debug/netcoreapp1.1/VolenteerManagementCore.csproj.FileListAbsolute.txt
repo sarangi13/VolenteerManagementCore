@@ -1,0 +1,10 @@
+C:\Users\swald\Documents\school\CIS 4327\Group\VolenteerManagementCore\VolenteerManagementCore\VolenteerManagementCore\bin\Debug\netcoreapp1.1\VolenteerManagementCore.deps.json
+C:\Users\swald\Documents\school\CIS 4327\Group\VolenteerManagementCore\VolenteerManagementCore\VolenteerManagementCore\bin\Debug\netcoreapp1.1\VolenteerManagementCore.runtimeconfig.json
+C:\Users\swald\Documents\school\CIS 4327\Group\VolenteerManagementCore\VolenteerManagementCore\VolenteerManagementCore\bin\Debug\netcoreapp1.1\VolenteerManagementCore.runtimeconfig.dev.json
+C:\Users\swald\Documents\school\CIS 4327\Group\VolenteerManagementCore\VolenteerManagementCore\VolenteerManagementCore\bin\Debug\netcoreapp1.1\VolenteerManagementCore.dll
+C:\Users\swald\Documents\school\CIS 4327\Group\VolenteerManagementCore\VolenteerManagementCore\VolenteerManagementCore\bin\Debug\netcoreapp1.1\VolenteerManagementCore.pdb
+C:\Users\swald\Documents\school\CIS 4327\Group\VolenteerManagementCore\VolenteerManagementCore\VolenteerManagementCore\obj\Debug\netcoreapp1.1\VolenteerManagementCore.csprojResolveAssemblyReference.cache
+C:\Users\swald\Documents\school\CIS 4327\Group\VolenteerManagementCore\VolenteerManagementCore\VolenteerManagementCore\obj\Debug\netcoreapp1.1\VolenteerManagementCore.csproj.CoreCompileInputs.cache
+C:\Users\swald\Documents\school\CIS 4327\Group\VolenteerManagementCore\VolenteerManagementCore\VolenteerManagementCore\obj\Debug\netcoreapp1.1\VolenteerManagementCore.AssemblyInfo.cs
+C:\Users\swald\Documents\school\CIS 4327\Group\VolenteerManagementCore\VolenteerManagementCore\VolenteerManagementCore\obj\Debug\netcoreapp1.1\VolenteerManagementCore.dll
+C:\Users\swald\Documents\school\CIS 4327\Group\VolenteerManagementCore\VolenteerManagementCore\VolenteerManagementCore\obj\Debug\netcoreapp1.1\VolenteerManagementCore.pdb
