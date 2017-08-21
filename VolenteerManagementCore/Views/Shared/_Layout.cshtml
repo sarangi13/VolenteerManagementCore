@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -12,7 +12,7 @@
     </div>
     <div class="row panel">
         <div id="status" class="col-xs-3">
-            Put the status buttons here
+            @await Component.InvokeAsync("NavigationMenu")
         </div>
         <div class="col-xs-8">
             @RenderBody()
