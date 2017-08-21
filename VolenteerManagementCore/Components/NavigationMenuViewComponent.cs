@@ -15,6 +15,7 @@ namespace VolenteerManagementCore.Components
 
         public IViewComponentResult Invoke()
         {
+            ViewBag.SelectedStatus = RouteData?.Values["status"];
             return View(repository.Volenteers
                     .Select(v => v.ApprovalStatus)
                     .Distinct()

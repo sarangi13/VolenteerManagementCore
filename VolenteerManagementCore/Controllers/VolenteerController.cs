@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using VolenteerManagementCore.Models;
 using System.Linq;
 using VolenteerManagementCore.Models.ViewModels;
@@ -28,7 +28,8 @@ namespace VolenteerManagementCore.Controllers
                 {
                     CurrentPage = page,
                     ItemsPerPage = PageSize,
-                    TotalItems = repository.Volenteers.Count()
+                    TotalItems = status == null ? repository.Volenteers.Count() : 
+                        repository.Volenteers.Where(v => v.ApprovalStatus == status).Count()
                 },
                 CurrentStatus = status
             });

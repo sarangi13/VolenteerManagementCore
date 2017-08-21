@@ -6,6 +6,7 @@ using Microsoft.Extensions.Logging;
 using VolenteerManagementCore.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace VolenteerManagementCore
 {
@@ -25,6 +26,12 @@ namespace VolenteerManagementCore
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration["Data:VolenteerManagement:ConnectionStrings"]));
+            services.AddDbContext<appIdentityDbContext>(options =>
+                options.UseSqlServer(
+                    Configuration["Data:VolenteerManagementIdentity:ConnectionStrings"]));
+
+            services.AddIdentity<IdentityUser, IdentityRole>()
+                .AddEntityFrameworkStores<appIdentityDbContext>();
             services.AddTransient<IVolenteerRepository, EFVolenteerRepository>();
             services.AddMvc();
         }
@@ -35,13 +42,33 @@ namespace VolenteerManagementCore
             app.UseDeveloperExceptionPage();
             app.UseStatusCodePages();
             app.UseStaticFiles();
+            app.UseIdentity();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Volenteer}/{action=List}/{id?}");
+                    name: null,
+                    template: "{status}/Page{page:int}",
+                    defaults: new { controller = "Volenteer", action = "List"}
+                    );
+                routes.MapRoute(
+                    name: null,
+                    template: "Page{page:int}",
+                    defaults: new { controller = "Volenteer", action = "List", page = 1}
+                    );
+                routes.MapRoute(
+                    name: null,
+                    template: "{status}",
+                    defaults: new { controller = "Volenteer", action = "List", page = 1}
+                    );
+                routes.MapRoute(
+                        name: null,
+                        template: "",
+                        defaults: new { controller = "Volenteer", action = "List", page = 1}
+                    );
+                routes.MapRoute(name: null, template: "{controller}/{action}/{id?}");
             });
             SeedData.EnsurePopulated(app);
+            IdentitySeedData.EnsurePopulated(app);
         }
     }
 }

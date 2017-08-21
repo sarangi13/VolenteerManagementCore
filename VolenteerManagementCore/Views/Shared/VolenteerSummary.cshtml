@@ -1,7 +1,15 @@
 ﻿@model Volenteer
-
-<div class="well">
-    <h4>First Name: @Model.FirstName</h4>
-    <h4>Last Name: @Model.LastName</h4>
-    <h5>Status: @Model.ApprovalStatus</h5>
-</div>
+<form asp-controller="Admin" asp-action="Delete" method="post">
+    <div class="well">
+        <a asp-controller="Admin" asp-action="Edit" class="btn btn-sm btn-warning pull-right"
+           asp-route-ID="@Model.ID">Edit</a>
+        <h4>First Name: @Model.FirstName</h4>
+        <h4>Last Name: @Model.LastName</h4>
+        <button type="submit" class="btn btn-danger btn-sm pull-right">
+            Delete
+        </button>
+        <h5>Status: @Model.ApprovalStatus</h5>
+        <input type="hidden" name="ID" value="@Model.ID" />
+        
+    </div>
+</form>

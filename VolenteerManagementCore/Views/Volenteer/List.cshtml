@@ -1,4 +1,6 @@
-@model VolenteerListViewModel
+﻿@model VolenteerListViewModel
+<a asp-controller="Admin" asp-action="Create" class="btn btn-primary pull-right">Add New Volunteer</a>
+<br />
 <h1>
     Volenteers
     <div page-model="@Model.Paginginfo" page-action="List" page-classes-enabled="true"

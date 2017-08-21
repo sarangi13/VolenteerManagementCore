@@ -1,0 +1,97 @@
+﻿@model Volenteer
+
+@{ 
+    ViewBag.Title = "Edit Volunteer";
+    Layout = null;
+}
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="ID" />
+    <table>
+        <tr>
+            <td>
+                <label asp-for="FirstName"></label>
+                </td>
+            <td>
+                <input asp-for="FirstName" class="form-control" />
+            </td>
+            
+        </tr>
+        <tr>
+            <td><label asp-for="LastName"></label></td>
+            <td><input asp-for="LastName" class="form-control" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="UserName"></label></td>
+            <td><input asp-for="UserName" class="form-control" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Password"></label></td>
+            <td><input asp-for="Password" class="form-control" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Center"></label></td>
+            <td><input asp-for="Center" class="form-control" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Skills"></label></td>
+            <td><input asp-for="Skills" class="form-control" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Availalibity"></label></td>
+            <td><input asp-for="Availalibity" class="form-control" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Address"></label></td>
+            <td><input asp-for="Address" class="form-control" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Phone"></label></td>
+            <td><input asp-for="Phone" class="form-control" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Email"></label></td>
+            <td><input asp-for="Email" class="form-control" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Education"></label></td>
+            <td><input asp-for="Education" class="form-control" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Lincense"></label></td>
+            <td><input asp-for="Lincense" class="form-control" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="EmergencyContact"></label></td>
+            <td><input asp-for="EmergencyContact" class="form-control" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="EmergencyPhone"></label></td>
+            <td><input asp-for="EmergencyPhone" class="form-control" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="EmergencyEmail"></label></td>
+            <td><input asp-for="EmergencyEmail" class="form-control" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="EmergencyAddress"></label></td>
+            <td><input asp-for="EmergencyAddress" class="form-control" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Drivers"></label></td>
+            <td><input asp-for="Drivers" class="form-control" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Ssn"></label></td>
+            <td><input asp-for="Ssn" class="form-control" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="ApprovalStatus"></label></td>
+            <td><input asp-for="ApprovalStatus" class="form-control" /></td>
+        </tr>
+        <tr>
+            <td><button class="btn btn-primary" type="submit">Save</button></td>
+            <td><a asp-controller="Volenteer" asp-action="List" class="btn btn-default">Cancel</a></td>
+        </tr>
+    </table>
+</form>
